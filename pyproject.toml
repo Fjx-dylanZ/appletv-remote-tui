@@ -38,6 +38,7 @@ atv-remote = "appletv_remote_tui.cli:main"
 [dependency-groups]
 dev = [
   "basedpyright>=1.40,<2",
+  "fonttools[woff]>=4.55,<5",
   "pytest>=8.4,<10",
   "pytest-asyncio>=1.1,<2",
   "ruff>=0.12,<1",

@@ -5,12 +5,10 @@ into the text field focused on your television.
 
 ![Remote mode connected to an Apple TV](docs/remote.svg)
 
-<table>
-  <tr>
-    <td><img src="docs/device-picker.svg" alt="Device picker"></td>
-    <td><img src="docs/text-input.svg" alt="Editing Apple TV text in TEXT INSERT mode"></td>
-  </tr>
-</table>
+<p>
+  <img src="docs/device-picker.svg" alt="Device picker" width="49%">
+  <img src="docs/text-input.svg" alt="Editing Apple TV text in TEXT INSERT mode" width="49%">
+</p>
 
 Available under the [MIT License](LICENSE).
 
