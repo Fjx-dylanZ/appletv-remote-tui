@@ -28,6 +28,10 @@ dependencies = [
   "textual>=8.2,<9",
 ]
 
+[project.urls]
+Homepage = "https://github.com/Fjx-dylanZ/appletv-remote-tui"
+Issues = "https://github.com/Fjx-dylanZ/appletv-remote-tui/issues"
+
 [project.scripts]
 atv-remote = "appletv_remote_tui.cli:main"
 
