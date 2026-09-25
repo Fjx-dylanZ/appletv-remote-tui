@@ -1,0 +1,85 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "appletv-remote-tui"
+dynamic = ["version"]
+description = "A Vim-friendly terminal remote for Apple TV"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "appletv-remote-tui contributors" }]
+keywords = ["apple-tv", "tvos", "remote", "tui", "textual", "vim", "pyatv"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console :: Curses",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia",
+  "Typing :: Typed",
+]
+dependencies = [
+  "platformdirs>=4.3,<5",
+  "pyatv>=0.18,<0.19",
+  "textual>=8.2,<9",
+]
+
+[project.scripts]
+atv-remote = "appletv_remote_tui.cli:main"
+
+[dependency-groups]
+dev = [
+  "basedpyright>=1.40,<2",
+  "pytest>=8.4,<10",
+  "pytest-asyncio>=1.1,<2",
+  "ruff>=0.12,<1",
+]
+
+[tool.hatch.version]
+path = "src/appletv_remote_tui/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+exclude = [".github"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/appletv_remote_tui"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "F",
+  "I",
+  "UP",
+  "B",
+  "ASYNC",
+  "RUF",
+  "SIM",
+  "C4",
+  "PIE",
+  "PT",
+  "ISC",
+  "TID",
+  "N",
+  "PERF",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["appletv_remote_tui"]
+
+[tool.basedpyright]
+pythonVersion = "3.11"
+typeCheckingMode = "strict"
+include = ["src", "tests"]

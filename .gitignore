@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environments and tool caches
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors and macOS
+.DS_Store
+.idea/
+.vscode/
+
+# Local credentials and logs
+*.log
+.env
+.env.*
+!.env.example
