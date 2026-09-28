@@ -20,6 +20,15 @@ Available under the [MIT License](LICENSE).
 
 ## Install and run
 
+With [Homebrew](https://brew.sh):
+
+```console
+brew install Fjx-dylanZ/tap/appletv-remote-tui
+atv-remote
+```
+
+This builds from source and needs Xcode or the Command Line Tools.
+
 From a checkout, with [`uv`](https://docs.astral.sh/uv/):
 
 ```console
